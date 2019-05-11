@@ -4,7 +4,6 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-@import './components/flexslider'
 
 @include foundation-global-styles;
 //@include foundation-grid;
@@ -78,6 +77,7 @@
 @import "components/featured-image";
 @import "components/dividers";
 @import "components/links";
+@import "components/flexslider";
 
 // Templates
 @import "templates/front";

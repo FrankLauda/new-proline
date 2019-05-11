@@ -8,37 +8,23 @@ get_header(); ?>
 
 	<?php if( have_rows('slider') ): ?>
 
+	<div class="flexslider">
+		<ul class="slides">
+
 	<?php while( have_rows('slider') ): the_row();
 
 		$image = get_sub_field('image');
+		$imageurl = $image['sizes']['slides'];
 		$title = get_sub_field('title');
 		?>
 
-		<img src="<?">
-
-		<?php echo $title;?>
+		<li><img src="<?php echo $imageurl;?>"></li>
 
 	<?php endwhile; ?>
+	</ul>
+</div>
 
 <?php endif; ?>
-
-	<!-- Place somewhere in the <body> of your page -->
-<div class="flexslider">
-  <ul class="slides">
-    <li>
-      <img src="slide1.jpg" />
-    </li>
-    <li>
-      <img src="slide2.jpg" />
-    </li>
-    <li>
-      <img src="slide3.jpg" />
-    </li>
-    <li>
-      <img src="slide4.jpg" />
-    </li>
-  </ul>
-</div>
 
 </header>
 
