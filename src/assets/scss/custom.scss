@@ -1,0 +1,17 @@
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+p, a {
+	font-size: 1.2rem !important;
+	font-weight: 600;
+}
+a {
+    text-transform: uppercase;
+}
+.grid-x {
+	margin-bottom: 3rem;
+	align-items: center;
+	.cell.large-5 {
+		padding: 7.5%;
+	}
+}

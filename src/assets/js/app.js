@@ -9,10 +9,10 @@ import Foundation from 'foundation-sites';
 //import './lib/foundation-explicit-pieces';
 import './lib/jquery.flexslider-min';
 
-$(document).foundation();
-
-$(window).on('load', (function() {
+$(window).on('load', function() {
   $('.flexslider').flexslider({
-    animation: "slide"
+    animation: "fade"
   });
 });
+
+$(document).foundation();

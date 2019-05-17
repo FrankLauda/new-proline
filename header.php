@@ -35,12 +35,17 @@
 		<nav class="site-navigation top-bar" role="navigation" id="<?php foundationpress_mobile_menu_id(); ?>">
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/proline-logo-final.png" width="200" alt="Proline Equipmeny"></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/proline-logo-final.png" width="200" alt="Proline Equipment"></a>
 				</div>
 			</div>
 			<div class="top-bar-right">
+				<a href="tel:+61299862004">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/phone.svg" width="14"> 02 9986 2004</a>
 				<?php get_search_form(); ?>
 			</div>
+
+			<hr>
 
 			<div class="main-nav">
 				<?php foundationpress_top_bar_r(); ?>

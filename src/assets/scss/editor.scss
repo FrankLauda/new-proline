@@ -33,6 +33,13 @@ body {
 	color: $body-font-color;
 }
 
+/** === Wordpress Editor Font colour === */
+
+body#tinymce {
+	color: $black;
+	font-weight: 600;
+}
+
 /** === Post Title === */
 .editor-post-title__block .editor-post-title__input{
   @extend h1;

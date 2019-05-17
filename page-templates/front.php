@@ -16,9 +16,19 @@ get_header(); ?>
 		$image = get_sub_field('image');
 		$imageurl = $image['sizes']['slides'];
 		$title = get_sub_field('title');
+		$short_description = get_sub_field('short_description');
+		$slider_link = get_sub_field('slider_link');
 		?>
 
-		<li><img src="<?php echo $imageurl;?>"></li>
+		<li>
+			<img src="<?php echo $imageurl;?>">
+				<div class="slider-description">
+					<h1><?php echo $title;?></h1>
+					<p><?php echo $short_description;?></p>
+					<a href="<?php echo $slider_link;?>">Find out more</a>
+				</div>
+		</li>
+
 
 	<?php endwhile; ?>
 	</ul>
@@ -28,44 +38,95 @@ get_header(); ?>
 
 </header>
 
-<?php do_action( 'foundationpress_before_content' ); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-<section class="intro" role="main">
-	<div class="fp-intro">
+	<?php
 
-		<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-			<div class="entry-content">
-				<?php the_content(); ?>
-			</div>
-			<footer>
-				<?php
-					wp_link_pages(
-						array(
-							'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ),
-							'after'  => '</p></nav>',
-						)
-					);
-				?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			<?php do_action( 'foundationpress_page_before_comments' ); ?>
-			<?php comments_template(); ?>
-			<?php do_action( 'foundationpress_page_after_comments' ); ?>
-		</div>
+// check if the flexible content field has rows of data
+if( have_rows('flexible_content') ):?>
 
-	</div>
+		     <! -- // loop through the rows of data-->
 
-</section>
-<?php endwhile; ?>
-<?php do_action( 'foundationpress_after_content' ); ?>
+		    <?php while ( have_rows('flexible_content') ) : the_row();?>
+
+		        <?php if( get_row_layout() == '1_column' ):?>
+
+		        	 <! -- // Full width wysiwyg-->
+
+		        	<div class="grid-x">
+		  				<div class="cell">
+		  					<?php echo get_sub_field('column_1');?>
+		  				</div>
+		  			</div>
+
+		  			<! -- // 2 column Wysiwyg-->
+
+		  			<?php elseif( get_row_layout() == '2_column' ):?>
+
+		        	<div class="grid-x grid-margin-x">
+		  				<div class="cell small-6">
+		  					<?php echo get_sub_field('column_1');?>
+		  				</div>
+		  			
+		  				<div class="cell small-6">
+		  					<?php echo get_sub_field('column_2');?>
+		  				</div>
+		  			</div>
+
+		  			<! -- // 2 column 30/70 -->
+
+		  			<?php elseif( get_row_layout() == '2_column_30_70' ):?>
+
+		        	<div class="grid-x">
+		  				<div class="cell large-5 medium-12">
+		  					<?php echo get_sub_field('column_1');?>
+		  				</div>
+		  	
+		  				<div class="cell large-7 medium-12">
+		  					<?php echo get_sub_field('column_2');?>
+		  				</div>
+		  			</div>
+
+		  				<! -- // 2 column 70/30 -->
+
+		  			<?php elseif( get_row_layout() == '2_column_70_30' ):?>
+
+		        	<div class="grid-x grid-margin-x">
+		  				<div class="cell small-7">
+		  					<?php echo get_sub_field('column_1');?>
+		  				</div>
+		  			
+		  				<div class="cell small-5">
+		  					<?php echo get_sub_field('column_2');?>
+		  				</div>
+		  			</div>
+
+		  			<! -- // 3 column Wysiwyg-->
+
+		  			<?php elseif( get_row_layout() == '3_column' ):?>
+
+		        	<div class="grid-x grid-margin-x">
+		  				<div class="cell small-4">
+		  					<?php echo get_sub_field('column_1');?>
+		  				</div>
+		  			
+		  				<div class="cell small-4">
+		  					<?php echo get_sub_field('column_2');?>
+		  				</div>
+
+		  				<div class="cell small-4">
+		  					<?php echo get_sub_field('column_3');?>
+		  				</div>
+		  			</div>
 
 
-<section class="">
-	
-	</div>
+		        <?php endif;?>
 
-</section>
+		    <?php endwhile;?>
+
+		 <?php else :?>
+
+		 	// no layouts found
+
+		 <?php endif;?>
 
 <?php get_footer();
 
