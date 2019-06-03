@@ -7,7 +7,7 @@ get_header(); ?>
 
 <?php /* Start loop */ ?>
 <?php while ( have_posts() ) : the_post(); ?>
-    <div class="main-container">
+    <div class="container">
         <div class="main-grid">
             <header class="kitchen-sink-header">
                 <h1 class="entry-title"><?php the_title(); ?></h1><hr>

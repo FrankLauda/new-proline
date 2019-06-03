@@ -34,6 +34,14 @@
   padding: 0;
   list-style: none;
 }
+.flexslider {
+  background: url('/proline/wp-content/themes/new-proline/dist/assets/images/swirl-background.jpg') center no-repeat;
+  padding: 50px;
+}
+.grid-x .cell .flexslider {
+  background: none;
+  padding: 0;
+}
 .flex-direction-nav {
   display: none;;
 }
@@ -260,7 +268,7 @@ html[xmlns] .flexslider .slides {
 /* ====================================================================================================================
  * RESPONSIVE
  * ====================================================================================================================*/
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 760px) {
   .flex-direction-nav .flex-prev {
     opacity: 1;
     left: 10px;
@@ -269,4 +277,18 @@ html[xmlns] .flexslider .slides {
     opacity: 1;
     right: 10px;
   }
+  .front-hero .slider-description {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    padding: 0 !important;
+}
+.flexslider {
+    padding: 40px;
+    margin-bottom: 30px !important;
+}
+.flex-control-nav {
+    position: relative;
+    bottom: -30px;
+}
 }

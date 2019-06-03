@@ -75,7 +75,7 @@ if( have_rows('flexible_content') ):?>
 
 		  			<?php elseif( get_row_layout() == '2_column_30_70' ):?>
 
-		        	<div class="grid-x">
+		        	<div class="grid-x full-width-two-thirds">
 		  				<div class="cell large-5 medium-12">
 		  					<?php echo get_sub_field('column_1');?>
 		  				</div>

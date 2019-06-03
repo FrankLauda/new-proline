@@ -1,7 +1,18 @@
-.main-container {
+.grid-x {
   @include xy-grid-container;
 }
-
+.full-width  {
+  max-width: 100%;
+  background: #484848;
+  padding: 75px 0;
+  margin-bottom: 75px;
+}
+.grid-x {
+  &.full-width-two-thirds {
+    max-width: 100%;
+    padding:0;
+  }
+}
 .main-grid {
   @include xy-grid();
   margin-top: 1rem;
