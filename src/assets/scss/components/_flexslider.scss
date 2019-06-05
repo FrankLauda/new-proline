@@ -36,7 +36,6 @@
 }
 .flexslider {
   background: url('/proline/wp-content/themes/new-proline/dist/assets/images/swirl-background.jpg') center no-repeat;
-  padding: 50px;
 }
 .grid-x .cell .flexslider {
   background: none;
@@ -52,7 +51,7 @@
  * BASE STYLES
  * ====================================================================================================================*/
 .flexslider {
-    margin: 0 auto 60px !important;
+    margin: 0 auto 100px !important;
     max-width: 1366px;
 }
 .flexslider .slides > li {
@@ -90,6 +89,7 @@ html[xmlns] .flexslider .slides {
 }
 .flexslider .slides {
   zoom: 1;
+  padding: 50px;
 }
 .flexslider .slides img {
   height: auto;

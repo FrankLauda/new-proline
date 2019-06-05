@@ -108,19 +108,39 @@ if( have_rows('flexible_content') ):?>
 		  			<?php elseif( get_row_layout() == '3_column' ):?>
 
 		        	<div class="grid-x container grid-margin-x">
-		  				<div class="cell small-4">
+		  				<div class="cell large-4">
 		  					<?php echo get_sub_field('column_1');?>
 		  				</div>
 		  			
-		  				<div class="cell small-4">
+		  				<div class="cell large-4">
 		  					<?php echo get_sub_field('column_2');?>
 		  				</div>
 
-		  				<div class="cell small-4">
+		  				<div class="cell large-4">
 		  					<?php echo get_sub_field('column_3');?>
 		  				</div>
 		  			</div>
 		  		</div>
+
+					<! -- // 3 column Floating-->
+
+					<?php elseif( get_row_layout() == 'floating_3_column' ):?>
+
+							        	<div class="grid-x full-width-two-thirds">
+							  				<div class="cell large-7 medium-12">
+							  					<?php echo get_sub_field('image');?>
+							  				</div>
+							  			
+											<div class="cell floating">
+							  					<?php echo get_sub_field('floating_image');?>
+							  				</div>
+
+							  				<div class="cell hero large-5 medium-12">
+							  					<?php echo get_sub_field('text');?>
+							  				</div>
+							  			</div>
+							  		</div>
+
 
 
 		        <?php endif;?>

@@ -8,6 +8,7 @@ import Foundation from 'foundation-sites';
 // the line below
 //import './lib/foundation-explicit-pieces';
 import './lib/jquery.flexslider-min';
+import './lib/custom';
 
 $(window).on('load', function() {
   $('.flexslider').flexslider({

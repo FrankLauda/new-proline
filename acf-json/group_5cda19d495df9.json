@@ -510,6 +510,73 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5cf5dac2f83a2": {
+                    "key": "layout_5cf5dac2f83a2",
+                    "name": "floating_3_column",
+                    "label": "Floating 3 Column",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf5dadaf83a3",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5cf5dafff83a4",
+                            "label": "Floating Image",
+                            "name": "floating_image",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5cf5db1bf83a5",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -548,13 +615,11 @@
         "slug",
         "author",
         "format",
-        "page_attributes",
-        "featured_image",
         "categories",
         "tags",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1558335254
+    "modified": 1559691845
 }

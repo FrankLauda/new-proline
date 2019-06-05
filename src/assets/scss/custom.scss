@@ -9,9 +9,108 @@ a {
     text-transform: uppercase;
 }
 .grid-x {
-	margin-bottom: 3rem;
+	margin-bottom: 6rem !important;
 	align-items: center;
 	.cell.large-5 {
 		padding: 7.5%;
 	}
 }
+img.hero-img {
+	width: 100%;
+	max-height: 576px;
+}
+.floating {
+    position: absolute;
+    width: 28% !important;
+    left: 55%;
+    top: 55%;
+    -webkit-transform: translate(-55%, -55%);
+    transform: translate(-55%, -55%);
+}
+.grid-x.full-width-two-thirds {
+    position: relative;
+    align-items: stretch;
+    p {
+    	margin-bottom: 0;
+    }
+}
+.hero.cell.large-5 {
+		padding: 9% 5% 7.5% 14%;
+		background: url('/proline/wp-content/themes/new-proline/dist/assets/images/sml-swirl-background.jpg') no-repeat center;
+		background-size: cover;
+	}
+.hero h1 {
+	font-size: 2.8rem;
+	font-weight: $global-weight-bold;
+}
+ul#ecom-nav {
+	list-style: none;
+	text-align: center;
+	li {
+		  	border-bottom: 1px solid #eee;
+		    margin: 0 30px;
+		    display: inline;
+		    padding-bottom: 10px;
+	 a {
+		color: #fff;
+    	padding: 0 20px;
+		}
+		a:hover {
+	    		color: #FC5B00;
+			}
+	}
+}
+
+
+/** === Woo Commerce === */
+
+.cat-item-18 a, .cat-item-19 a {
+	display: none;
+}
+.cat-item-18.cat-parent a, .cat-item-19.cat-parent a {
+	display: block;
+}
+ul.product-categories {
+	list-style: none;
+	.children {
+		list-style: none;
+	}
+}
+.main-container .sidebar {
+	display: none;
+}
+.main-container .main-grid {
+	justify-content: center;
+}
+.main-container .main-content {
+	width: 1140px !important;
+	margin: 0 auto;
+}
+.woocommerce {
+	ul.products li.product {
+    margin: 0 3% 2.992em 3%;
+    width: 19%;
+    border-bottom: 1px solid #999;
+    &:hover {
+    	border-bottom: 5px solid #FC5B00;
+    }
+		.price {
+    	display: none;
+		}
+		a img {
+	    width: auto;
+		}
+		.woocommerce-loop-product__title {
+	    color: #fff;
+	    font-weight: bold;
+	    text-align: center;
+		}
+	}
+	a.button, a.button:hover {
+	    padding: 0 0 40px 0;
+	    color: #FC5B00;
+	    background: none;
+	    display: block;
+	}
+}
+
